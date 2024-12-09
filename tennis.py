@@ -10,9 +10,9 @@ pygame.display.set_caption('ap comp sci tennis')
 screen.fill(green)
 
 court = pygame.image.load("Images/tennis-court.png").convert_alpha()
-court = pygame.transform.scale(court, (1475, 1475))
-court = pygame.transform.smoothscale(court, screen.get_size())
-screen.blit(court, (0, -250))
+court = pygame.transform.smoothscale(court,(screen_width,1.5*screen_height))
+
+screen.blit(court, (0, -screen_height/4))
 
 while True:
     for event in pygame.event.get():
